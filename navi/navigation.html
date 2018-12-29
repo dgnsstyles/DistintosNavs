@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>navigation menu</title>
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+    
+ 
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navigation-menu ">
+  <div class="navigation-menu__toggle js-nav-menu-toggle">
+    <span class="navigation-menu__bars"></span>
+  </div>
+  <ul class="menu-list">
+    <li class="menu-list__item">HOME</li>
+    <li class="menu-list__item">GALLERY</li>
+    <li class="menu-list__item">ABOUT</li>
+    <li class="menu-list__item">CONTACT</li>
+    <li class="menu-list__item">LOCATION</li>
+  </ul>
+</nav>
+
+<script
+src="https://code.jquery.com/jquery-3.3.1.js"
+ ></script>
+<script>
+    
+    (function($) {
+  $('.js-nav-menu-toggle').on('click', function() {
+    $(this).parents('.navigation-menu').toggleClass('navigation-menu--open');
+  });
+  
+  $('html').on('click', function(e) {
+    if(!$(e.target).closest('.js-nav-menu').length &&
+      ($('.js-nav-menu').hasClass('navigation-menu--open'))) {
+        $('.js-nav-menu').removeClass('navigation-menu--open');
+    }
+  });
+})(jQuery);
+    
+</script>
+</body>
+</html>
