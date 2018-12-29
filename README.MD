@@ -2,4 +2,4 @@
 
 principalmente son ejemplos de distintas maneras de enfretar la navegacion. Tanto en móvil como en Desktop.
 
-Esto esta dentro de Webdesign.
+Esto esta dentro de Webdesign Course.
